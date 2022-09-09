@@ -6,6 +6,7 @@ import basemod.interfaces.EditCardsSubscriber;
 import basemod.interfaces.PostInitializeSubscriber;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import main.java.robotspaceexplorerstate.powers.*;
+import savestate.StateElement;
 import savestate.StateFactories;
 import savestate.powers.PowerState;
 
@@ -20,6 +21,10 @@ public class RobotSpaceExplorerState implements PostInitializeSubscriber, EditCa
         populateCurrentActionsFactory();
         populateActionsFactory();
         populatePowerFactory();
+
+        StateElement.ElementFactories stateFactories = new StateElement.ElementFactories(() -> new RobotSpaceExplorerStateElement(), json -> new RobotSpaceExplorerStateElement(json), jsonObject -> new RobotSpaceExplorerStateElement(jsonObject));
+        StateFactories.elementFactories.put(RobotSpaceExplorerStateElement.ELEMENT_KEY, stateFactories);
+
     }
 
     private void populateCurrentActionsFactory() {

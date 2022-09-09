@@ -32,9 +32,10 @@ public class DualCorePowerState extends PowerState {
 
     @Override
     public AbstractPower loadPower(AbstractCreature targetAndSource) {
-        DualCorePower result = new DualCorePower(amount);
+        DualCorePower result = new DualCorePower(magicNumber);
 
         ReflectionHacks.setPrivate(result, DualCorePower.class, "magicNumber", magicNumber);
+        result.amount = amount;
 
         return result;
     }

@@ -14,7 +14,7 @@ public class RobotSpaceExplorerStateElement implements StateElement {
 
     public RobotSpaceExplorerStateElement() {
         this.autoLoaderIdOffset = ReflectionHacks
-                .getPrivateStatic(AutoloaderPower.class, "idOffset");
+                .getPrivateStatic(AutoloaderPower.class, "IdOffset");
     }
 
     public RobotSpaceExplorerStateElement(String jsonState) {
@@ -46,6 +46,6 @@ public class RobotSpaceExplorerStateElement implements StateElement {
 
     @Override
     public void restore() {
-        ReflectionHacks.setPrivateStatic(AutoloaderPower.class, "idOffset", autoLoaderIdOffset);
+        ReflectionHacks.setPrivateStatic(AutoloaderPower.class, "IdOffset", autoLoaderIdOffset);
     }
 }
