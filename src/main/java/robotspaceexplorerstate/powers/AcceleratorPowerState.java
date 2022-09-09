@@ -8,7 +8,6 @@ import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import savestate.powers.PowerState;
 
-// TODO: add me
 public class AcceleratorPowerState extends PowerState {
     private final int zeroCostCardsPlayedThisTurn;
 

@@ -8,7 +8,6 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import savestate.CardState;
 import savestate.powers.PowerState;
 
-// TODO: add me
 public class AutoloaderPowerState extends PowerState {
     private final CardState cardToPlay;
 

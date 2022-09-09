@@ -5,7 +5,6 @@ import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import savestate.powers.PowerState;
 
-// TODO: add me
 public class PowerGlovePowerState extends PowerState {
     public PowerGlovePowerState(AbstractPower power) {
         super(power);

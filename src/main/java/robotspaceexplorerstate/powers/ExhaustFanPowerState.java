@@ -5,7 +5,6 @@ import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import savestate.powers.PowerState;
 
-// TODO: add me
 public class ExhaustFanPowerState extends PowerState {
     public ExhaustFanPowerState(AbstractPower power) {
         super(power);
