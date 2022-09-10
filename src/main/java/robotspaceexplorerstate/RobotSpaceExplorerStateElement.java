@@ -1,4 +1,4 @@
-package main.java.robotspaceexplorerstate;
+package robotspaceexplorerstate;
 
 import RobotSpaceExplorer.patches.SalvagePatch;
 import RobotSpaceExplorer.powers.AutoloaderPower;

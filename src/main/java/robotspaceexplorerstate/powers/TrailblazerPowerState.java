@@ -1,4 +1,4 @@
-package main.java.robotspaceexplorerstate.powers;
+package robotspaceexplorerstate.powers;
 
 import RobotSpaceExplorer.powers.TrailblazerPower;
 import com.megacrit.cardcrawl.core.AbstractCreature;

@@ -1,4 +1,4 @@
-package main.java.robotspaceexplorerstate.powers;
+package robotspaceexplorerstate.powers;
 
 import RobotSpaceExplorer.powers.AutoloaderPower;
 import com.google.gson.JsonObject;

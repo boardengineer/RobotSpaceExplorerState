@@ -1,4 +1,4 @@
-package main.java.robotspaceexplorerstate;
+package robotspaceexplorerstate;
 
 import RobotSpaceExplorer.actions.AutoloaderAction;
 import RobotSpaceExplorer.actions.ReloadAction;
@@ -8,11 +8,11 @@ import RobotSpaceExplorer.powers.*;
 import basemod.BaseMod;
 import basemod.interfaces.PostInitializeSubscriber;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
-import main.java.robotspaceexplorerstate.actions.AutoloaderActionState;
-import main.java.robotspaceexplorerstate.actions.ReloadActionState;
-import main.java.robotspaceexplorerstate.cards.AbstractDefaultCardState;
-import main.java.robotspaceexplorerstate.cards.ReloadState;
-import main.java.robotspaceexplorerstate.powers.*;
+import robotspaceexplorerstate.actions.AutoloaderActionState;
+import robotspaceexplorerstate.actions.ReloadActionState;
+import robotspaceexplorerstate.cards.AbstractDefaultCardState;
+import robotspaceexplorerstate.cards.ReloadState;
+import robotspaceexplorerstate.powers.*;
 import savestate.CardState;
 import savestate.StateElement;
 import savestate.StateFactories;

@@ -1,4 +1,4 @@
-package main.java.robotspaceexplorerstate.patches;
+package robotspaceexplorerstate.patches;
 
 import RobotSpaceExplorer.patches.SalvagePatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;

@@ -1,4 +1,4 @@
-package main.java.robotspaceexplorerstate.powers;
+package robotspaceexplorerstate.powers;
 
 import RobotSpaceExplorer.powers.DualCorePower;
 import basemod.ReflectionHacks;

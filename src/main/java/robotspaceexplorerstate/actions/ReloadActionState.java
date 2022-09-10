@@ -1,4 +1,4 @@
-package main.java.robotspaceexplorerstate.actions;
+package robotspaceexplorerstate.actions;
 
 import RobotSpaceExplorer.actions.ReloadAction;
 import basemod.ReflectionHacks;

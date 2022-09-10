@@ -1,4 +1,4 @@
-package main.java.robotspaceexplorerstate.actions;
+package robotspaceexplorerstate.actions;
 
 import RobotSpaceExplorer.actions.AutoloaderAction;
 import basemod.ReflectionHacks;

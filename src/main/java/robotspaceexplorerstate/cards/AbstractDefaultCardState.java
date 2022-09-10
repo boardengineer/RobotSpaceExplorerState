@@ -1,4 +1,4 @@
-package main.java.robotspaceexplorerstate.cards;
+package robotspaceexplorerstate.cards;
 
 import RobotSpaceExplorer.cards.AbstractDefaultCard;
 import com.google.gson.JsonObject;

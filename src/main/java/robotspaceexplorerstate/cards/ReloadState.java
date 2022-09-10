@@ -1,4 +1,4 @@
-package main.java.robotspaceexplorerstate.cards;
+package robotspaceexplorerstate.cards;
 
 import RobotSpaceExplorer.cards.Reload;
 import basemod.ReflectionHacks;
