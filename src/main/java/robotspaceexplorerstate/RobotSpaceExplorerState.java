@@ -7,11 +7,13 @@ import RobotSpaceExplorer.cards.Reload;
 import RobotSpaceExplorer.powers.*;
 import basemod.BaseMod;
 import basemod.interfaces.PostInitializeSubscriber;
+import battleaimod.BattleAiMod;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import robotspaceexplorerstate.actions.AutoloaderActionState;
 import robotspaceexplorerstate.actions.ReloadActionState;
 import robotspaceexplorerstate.cards.AbstractDefaultCardState;
 import robotspaceexplorerstate.cards.ReloadState;
+import robotspaceexplorerstate.heuristics.PlayHeuristic;
 import robotspaceexplorerstate.powers.*;
 import savestate.CardState;
 import savestate.StateElement;
@@ -38,6 +40,7 @@ public class RobotSpaceExplorerState implements PostInitializeSubscriber {
         StateFactories.elementFactories
                 .put(RobotSpaceExplorerStateElement.ELEMENT_KEY, stateFactories);
 
+        BattleAiMod.cardPlayHeuristics.add(new PlayHeuristic());
     }
 
     private void populateCurrentActionsFactory() {
