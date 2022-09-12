@@ -87,6 +87,8 @@ public class RobotSpaceExplorerState implements PostInitializeSubscriber {
         StateFactories.powerByIdMap
                 .put(SalvageNextTurnPower.POWER_ID, new PowerState.PowerFactories(power -> new SalvageNextTurnPowerState(power)));
         StateFactories.powerByIdMap
+                .put(ScannerPower.POWER_ID, new PowerState.PowerFactories(power -> new ScannerPowerState(power)));
+        StateFactories.powerByIdMap
                 .put(SolarFlarePower.POWER_ID, new PowerState.PowerFactories(power -> new SolarFlarePowerState(power)));
         StateFactories.powerByIdMap
                 .put(StarDustEnergyDownPower.POWER_ID, new PowerState.PowerFactories(power -> new StarDustEnergyDownPowerState(power)));
