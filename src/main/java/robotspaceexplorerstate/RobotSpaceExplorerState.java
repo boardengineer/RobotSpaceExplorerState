@@ -4,8 +4,11 @@ import RobotSpaceExplorer.actions.AutoloaderAction;
 import RobotSpaceExplorer.actions.ReloadAction;
 import RobotSpaceExplorer.cards.AbstractDefaultCard;
 import RobotSpaceExplorer.cards.Reload;
+import RobotSpaceExplorer.cards.Wormhole;
+import RobotSpaceExplorer.characters.RobotSpaceExplorer;
 import RobotSpaceExplorer.powers.*;
 import basemod.BaseMod;
+import basemod.interfaces.EditCardsSubscriber;
 import basemod.interfaces.PostInitializeSubscriber;
 import battleaimod.BattleAiMod;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
@@ -22,7 +25,7 @@ import savestate.actions.CurrentActionState;
 import savestate.powers.PowerState;
 
 @SpireInitializer
-public class RobotSpaceExplorerState implements PostInitializeSubscriber {
+public class RobotSpaceExplorerState implements PostInitializeSubscriber, EditCardsSubscriber {
     public static void initialize() {
         BaseMod.subscribe(new RobotSpaceExplorerState());
     }
@@ -114,5 +117,10 @@ public class RobotSpaceExplorerState implements PostInitializeSubscriber {
         StateFactories.cardFactoriesByType.put(AbstractDefaultCard.class, cardFactories);
         StateFactories.cardFactoriesByTypeName
                 .put(AbstractDefaultCardState.TYPE_KEY, cardFactories);
+    }
+
+    @Override
+    public void receiveEditCards() {
+        BaseMod.removeCard(Wormhole.ID, RobotSpaceExplorer.Enums.ROBOT_ORANGE);
     }
 }
