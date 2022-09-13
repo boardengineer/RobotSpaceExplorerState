@@ -3,6 +3,7 @@ package robotspaceexplorerstate;
 import RobotSpaceExplorer.actions.AutoloaderAction;
 import RobotSpaceExplorer.actions.ReloadAction;
 import RobotSpaceExplorer.cards.AbstractDefaultCard;
+import RobotSpaceExplorer.cards.Explosion;
 import RobotSpaceExplorer.cards.Reload;
 import RobotSpaceExplorer.cards.Wormhole;
 import RobotSpaceExplorer.characters.RobotSpaceExplorer;
@@ -121,6 +122,10 @@ public class RobotSpaceExplorerState implements PostInitializeSubscriber, EditCa
 
     @Override
     public void receiveEditCards() {
+        // Action not supported, not sure we want it in AI control at all
         BaseMod.removeCard(Wormhole.ID, RobotSpaceExplorer.Enums.ROBOT_ORANGE);
+
+        // Need custom state for upgraded version
+        BaseMod.removeCard(Explosion.ID, RobotSpaceExplorer.Enums.ROBOT_ORANGE);
     }
 }
