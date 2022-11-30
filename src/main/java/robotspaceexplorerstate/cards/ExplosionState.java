@@ -21,7 +21,7 @@ public class ExplosionState extends CardState {
     public AbstractCard loadCard() {
         AbstractCard result = super.loadCard();
 
-        if (upgraded || !result.cardsToPreview.upgraded) {
+        if (upgraded && !result.cardsToPreview.upgraded) {
             result.cardsToPreview.upgrade();
         }
 
