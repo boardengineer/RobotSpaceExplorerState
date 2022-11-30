@@ -16,6 +16,7 @@ import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import robotspaceexplorerstate.actions.AutoloaderActionState;
 import robotspaceexplorerstate.actions.ReloadActionState;
 import robotspaceexplorerstate.cards.AbstractDefaultCardState;
+import robotspaceexplorerstate.cards.ExplosionState;
 import robotspaceexplorerstate.cards.ReloadState;
 import robotspaceexplorerstate.heuristics.PlayHeuristic;
 import robotspaceexplorerstate.powers.*;
@@ -113,6 +114,11 @@ public class RobotSpaceExplorerState implements PostInitializeSubscriber, EditCa
         StateFactories.cardFactoriesByType.put(Reload.class, reloadFactories);
         StateFactories.cardFactoriesByCardId.put(Reload.ID, reloadFactories);
 
+        CardState.CardFactories explosionFactories = new CardState.CardFactories(card -> new ExplosionState(card), json -> new ExplosionState(json), jsonObject -> new ExplosionState(jsonObject));
+
+        StateFactories.cardFactoriesByType.put(Explosion.class, explosionFactories);
+        StateFactories.cardFactoriesByCardId.put(Explosion.ID, explosionFactories);
+
         CardState.CardFactories cardFactories = new CardState.CardFactories(card -> new AbstractDefaultCardState(card), json -> new AbstractDefaultCardState(json), jsonObject -> new AbstractDefaultCardState(jsonObject));
 
         StateFactories.cardFactoriesByType.put(AbstractDefaultCard.class, cardFactories);
@@ -124,8 +130,5 @@ public class RobotSpaceExplorerState implements PostInitializeSubscriber, EditCa
     public void receiveEditCards() {
         // Action not supported, not sure we want it in AI control at all
         BaseMod.removeCard(Wormhole.ID, RobotSpaceExplorer.Enums.ROBOT_ORANGE);
-
-        // Need custom state for upgraded version
-        BaseMod.removeCard(Explosion.ID, RobotSpaceExplorer.Enums.ROBOT_ORANGE);
     }
 }
